@@ -14,7 +14,7 @@
 > * The definition of the NoC simulation environment.
 > * The full suite for calculating performance metrics.
 >
-> To ensure easy reproducibility, you can directly run the main script `main.py`. It will automatically load our provided pre-trained model (trained on mlp-4 with $\lambda_{distance}=0$) and perform inference. **This will generate the attention visualizations (corresponding to Fig. 7a in the paper), the final mapping load distribution plot, and detailed performance metrics in JSON files，thus achieving the effect of "w/o Spatial" as shown in Fig. 5 of the paper.**
+> To ensure easy reproducibility, you can directly run the main script `main.py`. It will automatically load our provided pre-trained model (trained on mlp-4 with $\lambda_{distance}=0$) and perform inference. **This will generate the attention visualizations (corresponding to Fig. 5a in the paper), the final mapping load distribution plot, and detailed performance metrics in JSON files，thus achieving the effect of "w/o Spatial" as shown in Fig. 5 of the paper.**
 >
 > The complete code, including the training pipeline, will be released publicly upon the paper's acceptance.
 
