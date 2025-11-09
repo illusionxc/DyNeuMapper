@@ -1,0 +1,397 @@
+
+# ----- all parameters -----
+# analysis_data_dir: result/snn_analysis_output/deepsnn_layers128_64_64_32_tau2.0_T8_lr0.001_e1_cifar10
+# snn_summary_file: result/snn_analysis_output/deepsnn_layers128_64_64_32_tau2.0_T8_lr0.001_e1_cifar10/snn_analysis_summary_deepsnn_layers128646432_tau2.0_cifar10_T100.json
+# summary_filepath: result/snn_analysis_output/deepsnn_layers128_64_64_32_tau2.0_T8_lr0.001_e1_cifar10/snn_analysis_summary_deepsnn_layers128646432_tau2.0_cifar10_T100.json
+# spike_events_filepath: result/snn_analysis_output/deepsnn_layers128_64_64_32_tau2.0_T8_lr0.001_e1_cifar10/spike_events_deepsnn_layers128646432_tau2.0_cifar10_T100.txt
+# graph_source: load_gexf
+# graph_build_strategy: static_full_topo
+# activity_graph_gexf_file: result/snn_analysis_output/deepsnn_layers128_64_64_32_tau2.0_T8_lr0.001_e1_cifar10/peak_joint_activity_graph_deepsnn_layers128646432_tau2.0_cifar10_T100_strategy_static_full_topo_peak_delay0-1.gexf
+# noc_rows: 6
+# noc_cols: 6
+# rl_core_capacity: 16
+# link_bandwidth: 1.0
+# router_pipeline_delay: 2
+# bits_per_flit: 64
+# avg_packet_length: 5
+# energy_per_bit_link: 0.5
+# energy_per_bit_router: 1.0
+# burst_window_size: 10
+# burst_stride: 5
+# device: cpu
+# out_dir: result/rl_mapper_output/load-gexf_static-full-topo-peak-delay0-1
+# log_interval: 10
+# rl_agent_type: dsta_net_dqn
+# rl_num_episodes: 300
+# rl_hidden_size: 256
+# rl_gamma: 0.95
+# rl_memory_capacity: 20000
+# rl_batch_size: 128
+# rl_update_every: 4
+# rl_lr_dqn: 0.0001
+# rl_epsilon_start: 1.0
+# rl_epsilon_end: 0.05
+# rl_tau_dqn: 0.005
+# rl_epsilon_decay: 0.9994850129437736
+# rl_actor_lr_ppo_sac: 0.0003
+# rl_critic_lr_ppo_sac: 0.001
+# rl_entropy_coef_ppo_sac: 0.01
+# rl_clip_epsilon_ppo: 0.3
+# rl_ppo_epochs: 5
+# rl_mini_batch_size_ppo: 128
+# rl_gae_lambda_ppo: 0.95
+# rl_use_adv_norm_ppo: True
+# rl_use_state_norm_ppo: True
+# rl_use_reward_norm_ppo: False
+# rl_state_norm_decay_ppo: 0.99
+# rl_reward_norm_decay_ppo: 0.99
+# rl_grad_clip_ppo: 0.5
+# rl_kl_target_ppo: 0.02
+# rl_kl_beta_ppo: 1.0
+# rl_value_clip_ppo: 1.0
+# rl_entropy_coef_start_ppo: 0.1
+# rl_entropy_coef_end_ppo: 0.01
+# rl_entropy_coef_decay_ppo: 0.999
+# rl_tau_sac: 0.005
+# rl_alpha_lr_sac: 0.0003
+# rl_initial_alpha_sac: 1.0
+# rl_target_entropy_ratio_sac: 0.98
+# gcpn_node_features: ['total_spikes', 'mean_firing_rate', 'firing_rate_variance', 'isi_mean', 'isi_cv', 'burstiness', 'functional_community_id']
+# gcpn_edge_features: ['source_activity', 'joint_activity_strength', 'transmission_success_rate', 'xcorr_peak_lag', 'xcorr_peak_value', 'sttc', 'transfer_entropy']
+# gcpn_use_freq_features: False
+# gcpn_freq_feat_dim: 10
+# gcpn_freq_pooling: none
+# gcpn_embed_dim: 32
+# gcpn_gnn_hidden_dim: 128
+# gcpn_gnn_n_layers: 3
+# gcpn_gat_n_heads: 2
+# gcpn_head_hidden_dim: 64
+# subgraph_radius: 1
+# dsta_use_dynamic_context: True
+# dsta_use_distance_awareness: True
+# dsta_use_temporal_encoding: True
+# dsta_distance_lambda: 0
+# dsta_use_distance_approximation: True
+# use_final_reward: True
+# final_reward_weight: 1.0
+# disable_immediate_reward: False
+# optimization_goal: comm_cost
+# immediate_reward_strategy: k_neighbors
+# k_neighbors_reward: 5
+# rw_immediate_comm_weight: 1e-05
+# invalid_action_penalty: -500.0
+# metric_w_comm_cost: 0.001
+# metric_w_max_link_load: 0.0
+# metric_w_load_variance: 0.0
+# metric_w_avg_packet_latency: 50.0
+# metric_w_max_packet_latency: 0.0
+# metric_w_total_energy_consumption: 0.0
+# metric_w_throughput: 0.0
+# metric_w_saturation_throughput: 0.0
+# metric_w_average_weighted_hops: 0.0
+# metric_w_peak_max_link_load: 0.0
+# metric_w_congestion_burstiness_ratio: 0.0
+# latency_model_type: linear
+# linear_congestion_factor: 100.0
+# saturation_penalty: 1000.0
+
+
+
+0 -> (1, 3)
+1 -> (1, 1)
+2 -> (4, 5)
+3 -> (1, 3)
+4 -> (1, 3)
+5 -> (1, 1)
+6 -> (0, 1)
+7 -> (4, 5)
+8 -> (2, 3)
+9 -> (1, 3)
+10 -> (4, 5)
+11 -> (1, 1)
+12 -> (3, 2)
+13 -> (3, 3)
+14 -> (3, 2)
+15 -> (1, 3)
+16 -> (4, 5)
+17 -> (4, 5)
+18 -> (1, 3)
+19 -> (4, 5)
+20 -> (4, 1)
+21 -> (1, 1)
+22 -> (2, 3)
+23 -> (3, 2)
+24 -> (0, 1)
+25 -> (4, 1)
+26 -> (3, 2)
+27 -> (2, 3)
+28 -> (1, 3)
+29 -> (0, 2)
+30 -> (1, 3)
+31 -> (0, 1)
+32 -> (1, 5)
+33 -> (3, 2)
+34 -> (0, 2)
+35 -> (2, 4)
+36 -> (3, 2)
+37 -> (2, 3)
+38 -> (3, 2)
+39 -> (1, 1)
+40 -> (1, 1)
+41 -> (5, 1)
+42 -> (1, 1)
+43 -> (2, 3)
+44 -> (1, 3)
+45 -> (0, 5)
+46 -> (0, 5)
+47 -> (3, 1)
+48 -> (2, 5)
+49 -> (5, 3)
+50 -> (4, 0)
+51 -> (1, 3)
+52 -> (2, 3)
+53 -> (5, 4)
+54 -> (0, 2)
+55 -> (0, 1)
+56 -> (2, 3)
+57 -> (4, 0)
+58 -> (1, 1)
+59 -> (4, 0)
+60 -> (3, 1)
+61 -> (3, 2)
+62 -> (2, 3)
+63 -> (4, 0)
+64 -> (0, 2)
+65 -> (3, 2)
+66 -> (3, 5)
+67 -> (0, 2)
+68 -> (2, 3)
+69 -> (3, 1)
+70 -> (0, 2)
+71 -> (1, 1)
+72 -> (1, 3)
+73 -> (0, 2)
+74 -> (3, 2)
+75 -> (3, 2)
+76 -> (0, 2)
+77 -> (1, 3)
+78 -> (1, 3)
+79 -> (4, 0)
+80 -> (4, 0)
+81 -> (3, 3)
+82 -> (0, 1)
+83 -> (0, 4)
+84 -> (2, 3)
+85 -> (3, 1)
+86 -> (3, 2)
+87 -> (3, 2)
+88 -> (1, 1)
+89 -> (0, 3)
+90 -> (1, 1)
+91 -> (2, 3)
+92 -> (3, 2)
+93 -> (1, 3)
+94 -> (5, 4)
+95 -> (3, 2)
+96 -> (3, 4)
+97 -> (1, 3)
+98 -> (1, 1)
+99 -> (2, 3)
+100 -> (1, 1)
+101 -> (0, 2)
+102 -> (0, 2)
+103 -> (0, 3)
+104 -> (5, 5)
+105 -> (0, 1)
+106 -> (0, 2)
+107 -> (3, 3)
+108 -> (3, 3)
+109 -> (3, 3)
+110 -> (2, 3)
+111 -> (0, 2)
+112 -> (3, 1)
+113 -> (1, 3)
+114 -> (0, 2)
+115 -> (0, 1)
+116 -> (3, 1)
+117 -> (1, 5)
+118 -> (3, 5)
+119 -> (1, 1)
+120 -> (2, 3)
+121 -> (3, 2)
+122 -> (2, 3)
+123 -> (0, 2)
+124 -> (0, 2)
+125 -> (3, 1)
+126 -> (0, 2)
+127 -> (1, 1)
+128 -> (2, 4)
+129 -> (2, 4)
+130 -> (2, 4)
+131 -> (1, 2)
+132 -> (2, 4)
+133 -> (1, 2)
+134 -> (2, 4)
+135 -> (3, 4)
+136 -> (2, 4)
+137 -> (2, 1)
+138 -> (2, 2)
+139 -> (2, 4)
+140 -> (2, 4)
+141 -> (1, 5)
+142 -> (2, 2)
+143 -> (1, 2)
+144 -> (2, 4)
+145 -> (3, 1)
+146 -> (2, 4)
+147 -> (3, 1)
+148 -> (2, 4)
+149 -> (2, 2)
+150 -> (2, 2)
+151 -> (1, 2)
+152 -> (2, 4)
+153 -> (1, 2)
+154 -> (2, 4)
+155 -> (1, 2)
+156 -> (1, 2)
+157 -> (0, 1)
+158 -> (0, 1)
+159 -> (2, 4)
+160 -> (3, 3)
+161 -> (3, 3)
+162 -> (2, 1)
+163 -> (2, 5)
+164 -> (2, 4)
+165 -> (3, 3)
+166 -> (3, 3)
+167 -> (3, 3)
+168 -> (3, 1)
+169 -> (1, 2)
+170 -> (1, 1)
+171 -> (1, 2)
+172 -> (1, 2)
+173 -> (1, 2)
+174 -> (2, 1)
+175 -> (3, 3)
+176 -> (3, 3)
+177 -> (2, 3)
+178 -> (3, 3)
+179 -> (3, 3)
+180 -> (1, 2)
+181 -> (1, 2)
+182 -> (3, 3)
+183 -> (1, 2)
+184 -> (2, 2)
+185 -> (3, 3)
+186 -> (2, 0)
+187 -> (1, 2)
+188 -> (4, 2)
+189 -> (1, 2)
+190 -> (0, 1)
+191 -> (4, 2)
+192 -> (4, 2)
+193 -> (4, 2)
+194 -> (3, 5)
+195 -> (4, 2)
+196 -> (4, 2)
+197 -> (2, 2)
+198 -> (2, 1)
+199 -> (4, 2)
+200 -> (2, 1)
+201 -> (2, 2)
+202 -> (2, 0)
+203 -> (2, 0)
+204 -> (2, 0)
+205 -> (2, 1)
+206 -> (2, 2)
+207 -> (2, 0)
+208 -> (2, 0)
+209 -> (4, 4)
+210 -> (2, 0)
+211 -> (2, 0)
+212 -> (2, 2)
+213 -> (2, 0)
+214 -> (2, 2)
+215 -> (2, 0)
+216 -> (0, 1)
+217 -> (2, 2)
+218 -> (2, 0)
+219 -> (0, 1)
+220 -> (2, 0)
+221 -> (1, 4)
+222 -> (2, 2)
+223 -> (2, 0)
+224 -> (3, 1)
+225 -> (2, 0)
+226 -> (4, 4)
+227 -> (2, 0)
+228 -> (2, 2)
+229 -> (2, 1)
+230 -> (0, 1)
+231 -> (0, 3)
+232 -> (2, 2)
+233 -> (2, 2)
+234 -> (0, 3)
+235 -> (0, 3)
+236 -> (0, 3)
+237 -> (0, 3)
+238 -> (0, 3)
+239 -> (0, 3)
+240 -> (2, 2)
+241 -> (0, 3)
+242 -> (1, 0)
+243 -> (0, 3)
+244 -> (0, 3)
+245 -> (4, 2)
+246 -> (0, 1)
+247 -> (2, 1)
+248 -> (0, 3)
+249 -> (0, 3)
+250 -> (2, 1)
+251 -> (2, 1)
+252 -> (0, 3)
+253 -> (1, 0)
+254 -> (2, 1)
+255 -> (1, 0)
+256 -> (3, 1)
+257 -> (0, 4)
+258 -> (1, 0)
+259 -> (3, 1)
+260 -> (1, 0)
+261 -> (1, 0)
+262 -> (1, 5)
+263 -> (1, 0)
+264 -> (0, 1)
+265 -> (3, 1)
+266 -> (1, 0)
+267 -> (2, 1)
+268 -> (2, 1)
+269 -> (0, 1)
+270 -> (1, 0)
+271 -> (4, 4)
+272 -> (1, 0)
+273 -> (1, 0)
+274 -> (1, 0)
+275 -> (1, 0)
+276 -> (4, 0)
+277 -> (1, 0)
+278 -> (1, 4)
+279 -> (1, 0)
+280 -> (4, 2)
+281 -> (2, 1)
+282 -> (3, 1)
+283 -> (2, 1)
+284 -> (1, 0)
+285 -> (3, 1)
+286 -> (2, 1)
+287 -> (2, 5)
+288 -> (2, 0)
+289 -> (4, 2)
+290 -> (4, 2)
+291 -> (4, 2)
+292 -> (4, 2)
+293 -> (4, 2)
+294 -> (4, 2)
+295 -> (0, 3)
+296 -> (0, 0)
+297 -> (4, 2)
