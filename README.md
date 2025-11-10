@@ -20,11 +20,6 @@
 
 ------
 
-### 
-
-## Abstract
-
-The efficient mapping of Spiking Neural Networks (SNNs) onto Network-on-Chip (NoC) hardware is a critical challenge in neuromorphic system design. Existing methods, limited by a static view, overlook the SNN's spatio-temporal dynamics, leading to suboptimal performance. We reframe this as learning on a 、**Dynamic Neuro-Physical Graph**—a novel representation unifying the SNN's functional topology with the NoC's evolving physical state. To this end, we propose **DyNeuMapper**, a scalable reinforcement learning framework that leverages two key innovations: a **subgraph-based GNN encoder**  that processes dynamic, localized views of the neuro-physical state to ensure scalability, and a **spatio-temporal attention mechanism**  that incorporates physical distance and decision history as powerful inductive biases. This approach not only achieves state-of-the-art results—reducing communication cost by 34.15% and latency by 40.86% on challenging recurrent SNNs—but also demonstrates **superior scalability**. Crucially, it succeeds where monolithic full-graph approaches fail due to memory constraints. Our work presents a practical and powerful tool for automated neuromorphic compilation.
 
 ## Key Features
 
